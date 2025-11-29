@@ -1,9 +1,9 @@
 import { useCenterStore } from '@/hooks/use-center'
-import GithubSVG from '@/svgs/github.svg'
+import GithubSVG from '@/svgs/github.webp'
 import { ANIMATION_DELAY, CARD_SPACING } from '@/consts'
 import { styles as hiCardStyles } from './hi-card'
-import JuejinSVG from '@/svgs/juejin.svg'
-import EmailSVG from '@/svgs/email.svg'
+import SteamSVG from '@/svgs/st.webp'
+import EmailSVG from '@/svgs/mail.webp'
 import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
@@ -57,15 +57,15 @@ export default function SocialButtons() {
 
 					{secondaryShow && (
 						<motion.a
-							href='https://juejin.cn/user/2427311675422382'
+							href='https://steamcommunity.com/profiles/76561198865414083/'
 							target='_blank'
 							initial={{ opacity: 0, scale: 0.6 }}
 							animate={{ opacity: 1, scale: 1 }}
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							className='card relative flex items-center gap-2 rounded-xl px-3 py-2.5 font-medium whitespace-nowrap'>
-							<JuejinSVG className='h-6 w-6' />
-							稀土掘金
+							<SteamSVG className='h-6 w-6' />
+							Steam
 						</motion.a>
 					)}
 
