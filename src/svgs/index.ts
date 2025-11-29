@@ -3,9 +3,9 @@
 
 import Svg0 from './about-filled.svg'
 import Svg1 from './about-outline.svg'
-import Svg2 from './email.svg'
-import Svg3 from './github.svg'
-import Svg4 from './juejin.svg'
+import Svg2 from './mail.webp'
+import Svg3 from './github.webp'
+import Svg4 from './st.webp'
 import Svg5 from './music.svg'
 import Svg6 from './pen.svg'
 import Svg7 from './play.svg'
@@ -25,9 +25,9 @@ export type SvgComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>
 export const svgItems: { key: string; Component: SvgComponent }[] = [
 	{ key: './about-filled.svg', Component: Svg0 },
 	{ key: './about-outline.svg', Component: Svg1 },
-	{ key: './email.svg', Component: Svg2 },
-	{ key: './github.svg', Component: Svg3 },
-	{ key: './juejin.svg', Component: Svg4 },
+	{ key: './mail.webp', Component: Svg2 },
+	{ key: './github.webp', Component: Svg3 },
+	{ key: './st.webp', Component: Svg4 },
 	{ key: './music.svg', Component: Svg5 },
 	{ key: './pen.svg', Component: Svg6 },
 	{ key: './play.svg', Component: Svg7 },
