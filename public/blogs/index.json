@@ -1,5 +1,17 @@
 [
   {
+    "slug": "20250227-00",
+    "title": "Re笔记之RC4",
+    "tags": [
+      "CTF",
+      "RC4",
+      "re"
+    ],
+    "date": "2025-02-27",
+    "summary": "原网站数据迁移",
+    "cover": "/blogs/20250227-00/0b8e1bc371ce00c0.jpg"
+  },
+  {
     "slug": "20250226-00",
     "title": "西电CTF—Re—A_game WP",
     "tags": [
