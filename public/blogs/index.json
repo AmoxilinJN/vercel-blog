@@ -8,7 +8,8 @@
     ],
     "date": "2026-01-01",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20260101-00/b9837515ba094134.jpg"
+    "cover": "/blogs/20260101-00/b9837515ba094134.jpg",
+    "category": "服务器"
   },
   {
     "slug": "20251108-00",
@@ -20,7 +21,8 @@
     ],
     "date": "2025-11-08",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20251108-00/44a858ed52202ff7.jpg"
+    "cover": "/blogs/20251108-00/44a858ed52202ff7.jpg",
+    "category": "CV"
   },
   {
     "slug": "20251018-00",
@@ -32,7 +34,8 @@
     ],
     "date": "2025-10-18",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20251018-00/214eedd1bc64ef42.jpg"
+    "cover": "/blogs/20251018-00/214eedd1bc64ef42.jpg",
+    "category": "CV"
   },
   {
     "slug": "20251009-00",
@@ -42,7 +45,8 @@
     ],
     "date": "2025-10-09",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20251009-00/ad5b294642440f73.png"
+    "cover": "/blogs/20251009-00/ad5b294642440f73.png",
+    "category": "杂谈"
   },
   {
     "slug": "20250723-00",
@@ -52,7 +56,8 @@
     ],
     "date": "2025-07-23",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250723-00/9908986d3732ab3b.jpg"
+    "cover": "/blogs/20250723-00/9908986d3732ab3b.jpg",
+    "category": "学习笔记"
   },
   {
     "slug": "20250719-00",
@@ -62,7 +67,8 @@
     ],
     "date": "2025-07-19",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250719-00/62060d884d1f7214.jpg"
+    "cover": "/blogs/20250719-00/62060d884d1f7214.jpg",
+    "category": "学习笔记"
   },
   {
     "slug": "20250715-00",
@@ -72,7 +78,8 @@
     ],
     "date": "2025-07-15",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250715-00/0d9f43e2c71cf00e.jpg"
+    "cover": "/blogs/20250715-00/0d9f43e2c71cf00e.jpg",
+    "category": "学习笔记"
   },
   {
     "slug": "20250714-00",
@@ -82,7 +89,8 @@
     ],
     "date": "2025-07-14",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250714-00/774c3802a20efdf4.jpg"
+    "cover": "/blogs/20250714-00/774c3802a20efdf4.jpg",
+    "category": "学习笔记"
   },
   {
     "slug": "20250713-00",
@@ -92,7 +100,8 @@
     ],
     "date": "2025-07-13",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250713-00/5f658e3222ae2141.jpg"
+    "cover": "/blogs/20250713-00/5f658e3222ae2141.jpg",
+    "category": "学习笔记"
   },
   {
     "slug": "20250410-00",
@@ -102,7 +111,8 @@
     ],
     "date": "2025-04-10",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250410-00/87bf94e4b735c4ea.png"
+    "cover": "/blogs/20250410-00/87bf94e4b735c4ea.png",
+    "category": "学习笔记"
   },
   {
     "slug": "20250319-00",
@@ -112,7 +122,8 @@
     ],
     "date": "2025-03-19",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250319-00/f6239c3dab734a57.jpg"
+    "cover": "/blogs/20250319-00/f6239c3dab734a57.jpg",
+    "category": "学习笔记"
   },
   {
     "slug": "20250316",
@@ -124,7 +135,8 @@
     ],
     "date": "2025-03-16",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250316/4876b7c70938f4b5.jpg"
+    "cover": "/blogs/20250316/4876b7c70938f4b5.jpg",
+    "category": "CTF"
   },
   {
     "slug": "20250311-00",
@@ -134,7 +146,8 @@
     ],
     "date": "2025-03-11",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250311-00/006943a734fff508.png"
+    "cover": "/blogs/20250311-00/006943a734fff508.png",
+    "category": "学习笔记"
   },
   {
     "slug": "20250310-00",
@@ -144,7 +157,8 @@
     ],
     "date": "2025-03-10",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250310-00/05fdb0dd405f6ae9.png"
+    "cover": "/blogs/20250310-00/05fdb0dd405f6ae9.png",
+    "category": "杂谈"
   },
   {
     "slug": "20250308-00",
@@ -154,7 +168,8 @@
     ],
     "date": "2025-03-08",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250308-00/726aed73b91ffe6c.png"
+    "cover": "/blogs/20250308-00/726aed73b91ffe6c.png",
+    "category": "学习笔记"
   },
   {
     "slug": "20250306-00",
@@ -164,7 +179,8 @@
     ],
     "date": "2025-03-06",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250306-00/6fc2bf8543049866.jpg"
+    "cover": "/blogs/20250306-00/6fc2bf8543049866.jpg",
+    "category": "学习笔记"
   },
   {
     "slug": "20250305-00",
@@ -177,7 +193,8 @@
     ],
     "date": "2025-03-05",
     "summary": "",
-    "cover": "/blogs/20250305-00/6f598b2f379c92d9.png"
+    "cover": "/blogs/20250305-00/6f598b2f379c92d9.png",
+    "category": "CTF"
   },
   {
     "slug": "20250227-00",
@@ -189,7 +206,8 @@
     ],
     "date": "2025-02-27",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250227-00/0b8e1bc371ce00c0.jpg"
+    "cover": "/blogs/20250227-00/0b8e1bc371ce00c0.jpg",
+    "category": "CTF"
   },
   {
     "slug": "20250226-00",
@@ -203,7 +221,8 @@
     ],
     "date": "2025-02-26",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250226-00/86d0228e73b11f3c.jpg"
+    "cover": "/blogs/20250226-00/86d0228e73b11f3c.jpg",
+    "category": "CTF"
   },
   {
     "slug": "20250225-00",
@@ -217,6 +236,7 @@
     ],
     "date": "2025-02-25",
     "summary": "原网站数据迁移",
-    "cover": "/blogs/20250225-00/3a699ffacd1be904.png"
+    "cover": "/blogs/20250225-00/3a699ffacd1be904.png",
+    "category": "杂谈"
   }
 ]
