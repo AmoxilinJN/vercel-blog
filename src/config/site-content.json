@@ -46,21 +46,21 @@
 			"type": "github",
 			"value": "https://github.com/yysuni",
 			"label": "Github",
-			"order": 1
+			"order": 2
 		},
 		{
 			"id": "juejin",
 			"type": "link",
 			"value": "https://steamcommunity.com/profiles/76561198865414083/",
 			"label": "Steam",
-			"order": 2
+			"order": 3
 		},
 		{
 			"id": "email",
 			"type": "email",
 			"value": "15621167967@163.com",
 			"label": "",
-			"order": 3
+			"order": 1
 		}
 	],
 	"clockShowSeconds": true,
