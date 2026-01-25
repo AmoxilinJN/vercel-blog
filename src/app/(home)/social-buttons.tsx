@@ -1,23 +1,11 @@
 import { useCenterStore } from '@/hooks/use-center'
-import GithubSVG from '@/svgs/github.svg'
+import GithubSVG from '@/svgs/github_new.svg'
 import { ANIMATION_DELAY, CARD_SPACING } from '@/consts'
-import { useConfigStore } from './stores/config-store'
-import JuejinSVG from '@/svgs/juejin.svg'
-import EmailSVG from '@/svgs/email.svg'
-import XSVG from '@/svgs/x.svg'
-import TgSVG from '@/svgs/tg.svg'
-import WechatSVG from '@/svgs/wechat.svg'
-import FacebookSVG from '@/svgs/facebook.svg'
-import TiktokSVG from '@/svgs/tiktok.svg'
-import InstagramSVG from '@/svgs/instagram.svg'
-import WeiboSVG from '@/svgs/weibo.svg'
-import XiaohongshuSVG from '@/svgs/小红书.svg'
-import ZhihuSVG from '@/svgs/知乎.svg'
-import BilibiliSVG from '@/svgs/哔哩哔哩.svg'
-import QqSVG from '@/svgs/qq.svg'
-import { motion, AnimatePresence } from 'motion/react'
-import { useEffect, useState, useMemo, useRef } from 'react'
-import type React from 'react'
+import { styles as hiCardStyles } from './hi-card'
+import SteamSVG from '@/svgs/st_new.svg'
+import EmailSVG from '@/svgs/mail_new.svg'
+import { motion } from 'motion/react'
+import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { useSize } from '@/hooks/use-size'
 import { HomeDraggableLayer } from './home-draggable-layer'
@@ -246,23 +234,53 @@ export default function SocialButtons() {
 		}
 
 		return (
-			<motion.a
-				key={button.id}
-				href={button.value}
-				target='_blank'
-				{...commonProps}
-				className={`card relative rounded-xl font-medium whitespace-nowrap ${hasLabel ? 'flex items-center gap-2 px-3 py-2.5' : 'p-1.5'}`}>
-				<Icon className={iconSize} />
-				{hasLabel && button.label}
-			</motion.a>
-		)
-	}
+			<motion.div
+				className='absolute max-sm:static'
+				animate={{ left: center.x + hiCardStyles.width / 2, top: center.y + hiCardStyles.height / 2 + CARD_SPACING }}
+				initial={{ left: center.x + hiCardStyles.width / 2, top: center.y + hiCardStyles.height / 2 + CARD_SPACING }}>
+				<div className='absolute top-0 right-0 flex items-center gap-3 max-sm:static'>
+					{tertiaryShow && (
+						<motion.a
+							href='https://github.com/AmoxilinJN'
+							target='_blank'
+							initial={{ opacity: 0, scale: 0.6 }}
+							animate={{ opacity: 1, scale: 1 }}
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+							className='font-averia flex items-center gap-2 rounded-xl border bg-[#070707] px-3 py-2 text-xl text-white'
+							style={{ boxShadow: ' inset 0 0 12px rgba(255, 255, 255, 0.4)' }}>
+							<GithubSVG />
+							Github
+						</motion.a>
+					)}
 
-	return (
-		<HomeDraggableLayer cardKey='socialButtons' x={x} y={y} width={styles.width} height={styles.height}>
-			<motion.div className='absolute max-sm:static' animate={{ left: x, top: y }} initial={{ left: x, top: y }}>
-				<div className='absolute top-0 left-0 flex flex-row-reverse items-center gap-3 max-sm:static' style={{ width: styles.width }}>
-					{sortedButtons.map(button => renderButton(button))}
+					{secondaryShow && (
+						<motion.a
+							href='https://steamcommunity.com/profiles/76561198865414083/'
+							target='_blank'
+							initial={{ opacity: 0, scale: 0.6 }}
+							animate={{ opacity: 1, scale: 1 }}
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+							className='card relative flex items-center gap-2 rounded-xl px-3 py-2.5 font-medium whitespace-nowrap'>
+							<SteamSVG className='h-6 w-6' />
+							Steam
+						</motion.a>
+					)}
+
+					<motion.button
+						onClick={() => {
+							navigator.clipboard.writeText('15621167967@163.com').then(() => {
+								toast.success('邮箱已复制到剪贴板')
+							})
+						}}
+						initial={{ opacity: 0, scale: 0.6 }}
+						animate={{ opacity: 1, scale: 1 }}
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						className='card btn relative rounded-xl p-1.5'>
+						<EmailSVG />
+					</motion.button>
 				</div>
 			</motion.div>
 		</HomeDraggableLayer>
