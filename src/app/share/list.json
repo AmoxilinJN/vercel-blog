@@ -205,7 +205,7 @@
 	},
 	{
 		"name": "Isocons",
-		"logo": "blob:https://www.yysuni.com/6e6e7339-d34d-40ef-b3e5-1f12ad5f6b1d",
+		"logo": "/images/share/97859f1c57799dd2.png",
 		"url": "https://www.isocons.app/",
 		"description": "3D icons 网站，酷酷的，免费。",
 		"tags": [
@@ -220,6 +220,16 @@
 		"description": "无限压缩，快且方便，可以直接对比效果",
 		"tags": [
 			"图片"
+		],
+		"stars": 3
+	},
+	{
+		"name": "WoraWork",
+		"logo": "https://worawork.vercel.app/Icons/worawork.webp",
+		"url": "https://worawork.vercel.app/",
+		"description": "方格世界的 Web3D，场景渲染非常棒，非常值得体验",
+		"tags": [
+			"3D"
 		],
 		"stars": 3
 	}

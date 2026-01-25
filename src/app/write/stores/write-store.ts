@@ -4,6 +4,16 @@ import { hashFileSHA256 } from '@/lib/file-utils'
 import { loadBlog } from '@/lib/load-blog'
 import type { PublishForm, ImageItem } from '../types'
 
+export const formatDateTimeLocal = (date: Date = new Date()): string => {
+	const pad = (n: number) => String(n).padStart(2, '0')
+	const year = date.getFullYear()
+	const month = pad(date.getMonth() + 1)
+	const day = pad(date.getDate())
+	const hours = pad(date.getHours())
+	const minutes = pad(date.getMinutes())
+	return `${year}-${month}-${day}T${hours}:${minutes}`
+}
+
 type WriteStore = {
 	// Mode state
 	mode: 'create' | 'edit'
@@ -18,7 +28,7 @@ type WriteStore = {
 	// Image state
 	images: ImageItem[]
 	addUrlImage: (url: string) => void
-	addFiles: (files: FileList | File[]) => Promise<void>
+	addFiles: (files: FileList | File[]) => Promise<ImageItem[]>
 	deleteImage: (id: string) => void
 
 	// Cover state
@@ -41,8 +51,10 @@ const initialForm: PublishForm = {
 	title: '',
 	md: '',
 	tags: [],
-	date: new Date().toISOString().slice(0, 10),
-	summary: ''
+	date: formatDateTimeLocal(),
+	summary: '',
+	hidden: false,
+	category: ''
 }
 
 export const useWriteStore = create<WriteStore>((set, get) => ({
@@ -71,12 +83,12 @@ export const useWriteStore = create<WriteStore>((set, get) => ({
 	addFiles: async (files: FileList | File[]) => {
 		const { images } = get()
 		const arr = Array.from(files).filter(f => f.type.startsWith('image/'))
-		if (arr.length === 0) return
+		if (arr.length === 0) return []
 
-		const existingHashes = new Set<string>(
+		const existingHashes = new Map<string, ImageItem>(
 			images
 				.filter((it): it is Extract<ImageItem, { type: 'file'; hash?: string }> => it.type === 'file' && (it as any).hash)
-				.map(it => (it as any).hash as string)
+				.map(it => [(it as any).hash as string, it])
 		)
 
 		const computed = await Promise.all(
@@ -94,19 +106,31 @@ export const useWriteStore = create<WriteStore>((set, get) => ({
 			return true
 		})
 
-		if (unique.length === 0) {
-			toast.info('图片已存在，不重复添加')
-			return
+		const resultImages: ImageItem[] = []
+
+		// 处理已存在的图片
+		for (const { hash } of computed) {
+			if (existingHashes.has(hash)) {
+				resultImages.push(existingHashes.get(hash)!)
+			}
 		}
 
-		const newItems: ImageItem[] = unique.map(({ file, hash }) => {
-			const id = Math.random().toString(36).slice(2, 10)
-			const previewUrl = URL.createObjectURL(file)
-			const filename = file.name
-			return { id, type: 'file', file, previewUrl, filename, hash }
-		})
+		// 处理新图片
+		if (unique.length > 0) {
+			const newItems: ImageItem[] = unique.map(({ file, hash }) => {
+				const id = Math.random().toString(36).slice(2, 10)
+				const previewUrl = URL.createObjectURL(file)
+				const filename = file.name
+				return { id, type: 'file', file, previewUrl, filename, hash }
+			})
 
-		set(state => ({ images: [...newItems, ...state.images] }))
+			set(state => ({ images: [...newItems, ...state.images] }))
+			resultImages.push(...newItems)
+		} else if (resultImages.length === 0) {
+			toast.info('图片已存在，不重复添加')
+		}
+
+		return resultImages
 	},
 	deleteImage: id =>
 		set(state => {
@@ -168,8 +192,10 @@ export const useWriteStore = create<WriteStore>((set, get) => ({
 					title: blog.config.title || '',
 					md: blog.markdown,
 					tags: blog.config.tags || [],
-					date: blog.config.date || new Date().toISOString().slice(0, 10),
-					summary: blog.config.summary || ''
+					date: blog.config.date ? formatDateTimeLocal(new Date(blog.config.date)) : formatDateTimeLocal(),
+					summary: blog.config.summary || '',
+					hidden: blog.config.hidden || false,
+					category: blog.config.category || ''
 				},
 				images,
 				cover,
@@ -201,7 +227,7 @@ export const useWriteStore = create<WriteStore>((set, get) => ({
 		set({
 			mode: 'create',
 			originalSlug: null,
-			form: { ...initialForm, date: new Date().toISOString().slice(0, 10) },
+			form: { ...initialForm, date: formatDateTimeLocal() },
 			images: [],
 			cover: null
 		})

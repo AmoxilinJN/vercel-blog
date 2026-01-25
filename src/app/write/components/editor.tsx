@@ -6,7 +6,7 @@ import { useRef } from 'react'
 const defaultText = 'text'
 
 export function WriteEditor() {
-	const { form, updateForm } = useWriteStore()
+	const { form, updateForm, images, addFiles } = useWriteStore()
 	const textareaRef = useRef<HTMLTextAreaElement>(null)
 
 	const insertText = (text: string) => {
@@ -127,24 +127,52 @@ export function WriteEditor() {
 		}
 	}
 
+	const handlePaste = async (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
+		const items = e.clipboardData.items
+		if (!items) return
+
+		const imageFiles: File[] = []
+		for (let i = 0; i < items.length; i++) {
+			const item = items[i]
+			if (item.type.startsWith('image/')) {
+				const file = item.getAsFile()
+				if (file) {
+					imageFiles.push(file)
+				}
+			}
+		}
+
+		if (imageFiles.length > 0) {
+			e.preventDefault()
+
+			const resultImages = await addFiles(imageFiles).catch(() => [])
+
+			if (resultImages && resultImages.length > 0) {
+				// 为所有处理后的图片（包括新添加和已存在的）生成 markdown
+				const markdowns = resultImages.map(item => (item.type === 'url' ? `![](${item.url})` : `![](local-image:${item.id})`)).join('\n')
+				insertText(markdowns)
+			}
+		}
+	}
+
 	return (
 		<motion.div
 			initial={{ opacity: 0, scale: 0.8 }}
 			animate={{ opacity: 1, scale: 1 }}
 			transition={{ delay: INIT_DELAY }}
-			className='flex min-h-[800px] w-[800px] flex-col rounded-[40px] border bg-white/60 p-6 shadow'>
+			className='bg-card flex min-h-[800px] w-[800px] flex-col rounded-[40px] border p-6 shadow'>
 			<div className='mb-3 flex gap-3'>
 				<input
 					type='text'
 					placeholder='标题'
-					className='flex-1 rounded-lg border bg-white/60 px-3 py-2 text-sm'
+					className='bg-card flex-1 rounded-lg border px-3 py-2 text-sm'
 					value={form.title}
 					onChange={e => updateForm({ title: e.target.value })}
 				/>
 				<input
 					type='text'
 					placeholder='slug（xx-xx）'
-					className='w-[200px] rounded-lg border bg-white/60 px-3 py-2 text-sm'
+					className='bg-card w-[200px] rounded-lg border px-3 py-2 text-sm'
 					value={form.slug}
 					onChange={e => updateForm({ slug: e.target.value })}
 				/>
@@ -152,10 +180,11 @@ export function WriteEditor() {
 			<textarea
 				ref={textareaRef}
 				placeholder='Markdown 内容'
-				className='h-[650px] w-full flex-1 resize-none rounded-xl border bg-white/60 p-4 text-sm'
+				className='bg-card h-[650px] w-full flex-1 resize-none rounded-xl border p-4 text-sm'
 				value={form.md}
 				onChange={e => updateForm({ md: e.target.value })}
 				onKeyDown={handleKeyDown}
+				onPaste={handlePaste}
 			/>
 		</motion.div>
 	)
