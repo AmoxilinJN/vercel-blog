@@ -1,5 +1,15 @@
 [
   {
+    "slug": "20250308-00",
+    "title": "CSAPP学习笔记1.2",
+    "tags": [
+      "CSAPP"
+    ],
+    "date": "2025-03-08",
+    "summary": "原网站数据迁移",
+    "cover": "/blogs/20250308-00/726aed73b91ffe6c.png"
+  },
+  {
     "slug": "20250306-00",
     "title": "CSAPP学习笔记1.1",
     "tags": [
