@@ -1,5 +1,17 @@
 [
   {
+    "slug": "20251108-00",
+    "title": "Diffusion Model学习笔记其二",
+    "tags": [
+      "Diffusion Model",
+      "机器学习",
+      "计算机视觉"
+    ],
+    "date": "2025-11-08",
+    "summary": "原网站数据迁移",
+    "cover": "/blogs/20251108-00/44a858ed52202ff7.jpg"
+  },
+  {
     "slug": "20251018-00",
     "title": "Diffusion Model学习笔记其一",
     "tags": [
