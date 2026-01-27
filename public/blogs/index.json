@@ -1,5 +1,18 @@
 [
   {
+    "slug": "20260127-00",
+    "title": "GAN学习笔记",
+    "tags": [
+      "机器学习",
+      "计算机视觉"
+    ],
+    "date": "2026-01-27T21:07",
+    "summary": "",
+    "cover": "/blogs/20260127-00/12bf3cdf852b92b5.png",
+    "hidden": false,
+    "category": "CV"
+  },
+  {
     "slug": "20260101-00",
     "title": "服务器使用指令随笔",
     "tags": [
