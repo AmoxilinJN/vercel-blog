@@ -1,5 +1,18 @@
 [
   {
+    "slug": "20260127-02",
+    "title": "starnet与YOLOv8、Faster R-CNN在SSDD上的mAP比较结果",
+    "tags": [
+      "实验",
+      "RT-DETR"
+    ],
+    "date": "2026-01-27T21:26",
+    "summary": "",
+    "cover": "/blogs/20260127-02/93537457eb8a15bc.png",
+    "hidden": false,
+    "category": "CV"
+  },
+  {
     "slug": "20260127-01",
     "title": "实验结果汇总分析与算法原理",
     "tags": [
