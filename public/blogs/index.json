@@ -1,5 +1,18 @@
 [
   {
+    "slug": "20260127-01",
+    "title": "实验结果汇总分析与算法原理",
+    "tags": [
+      "实验",
+      "RT-DETR"
+    ],
+    "date": "2026-01-27T21:12",
+    "summary": "图片太多懒得弄了，有需要可以私我",
+    "cover": "/blogs/20260127-01/bfded49d836ededa.jpg",
+    "hidden": false,
+    "category": "CV"
+  },
+  {
     "slug": "20260127-00",
     "title": "GAN学习笔记",
     "tags": [
