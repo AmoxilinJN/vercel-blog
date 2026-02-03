@@ -1,5 +1,17 @@
 [
   {
+    "slug": "20260203-00",
+    "title": "解决VMware启动虚拟机显示权限不足、找不到vmdk的问题",
+    "tags": [
+      "虚拟机",
+      "VMware"
+    ],
+    "date": "2026-02-03T20:50",
+    "summary": "",
+    "hidden": false,
+    "category": "杂谈"
+  },
+  {
     "slug": "20260129-01",
     "title": "海外服务器自建节点",
     "tags": [
