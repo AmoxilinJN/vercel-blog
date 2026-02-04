@@ -1,5 +1,17 @@
 [
   {
+    "slug": "20260204-00",
+    "title": "解决 pip install externally-managed-environment 问题",
+    "tags": [
+      "pip"
+    ],
+    "date": "2026-02-04T22:04",
+    "summary": "",
+    "cover": "/blogs/20260204-00/9d4eb5c0783a2cc7.jpg",
+    "hidden": false,
+    "category": "杂谈"
+  },
+  {
     "slug": "20260203-00",
     "title": "解决VMware启动虚拟机显示权限不足、找不到vmdk的问题",
     "tags": [
