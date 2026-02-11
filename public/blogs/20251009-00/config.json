@@ -3,7 +3,9 @@
   "tags": [
     "股票"
   ],
-  "date": "2025-10-09",
+  "date": "2025-10-09T08:00",
   "summary": "原网站数据迁移",
-  "cover": "/blogs/20251009-00/ad5b294642440f73.png"
+  "cover": "/blogs/20251009-00/ad5b294642440f73.png",
+  "hidden": false,
+  "category": ""
 }
