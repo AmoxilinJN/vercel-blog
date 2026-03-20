@@ -1,5 +1,18 @@
 [
   {
+    "slug": "20260320-00",
+    "title": "Python添加自定义模块路径",
+    "tags": [
+      "python",
+      "路径"
+    ],
+    "date": "2026-03-20T22:41",
+    "summary": "",
+    "cover": "/blogs/20260320-00/fde7e55df132111e.png",
+    "hidden": false,
+    "category": "杂谈"
+  },
+  {
     "slug": "20260305-00",
     "title": "通过vibe coding开发了一款吃饭决策软件",
     "tags": [
