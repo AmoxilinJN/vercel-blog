@@ -26,6 +26,15 @@
     "category": "杂谈"
   },
   {
+    "slug": "20260223-00",
+    "title": "Commemoration",
+    "tags": [],
+    "date": "2026-02-23T17:11",
+    "summary": "",
+    "hidden": false,
+    "category": "杂谈"
+  },
+  {
     "slug": "20260204-00",
     "title": "解决 pip install externally-managed-environment 问题",
     "tags": [
