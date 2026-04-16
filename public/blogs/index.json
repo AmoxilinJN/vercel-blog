@@ -1,5 +1,18 @@
 [
   {
+    "slug": "20260416-00",
+    "title": "harness工程随笔",
+    "tags": [
+      "agent",
+      "harness"
+    ],
+    "date": "2026-04-16T16:51",
+    "summary": "",
+    "cover": "/blogs/20260416-00/9ad38cdb56835246.jpg",
+    "hidden": false,
+    "category": "学习笔记"
+  },
+  {
     "slug": "20260320-00",
     "title": "Python添加自定义模块路径",
     "tags": [
