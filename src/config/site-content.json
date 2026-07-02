@@ -39,7 +39,7 @@
 		{
 			"id": "github",
 			"type": "github",
-			"value": "https://github.com/yysuni",
+			"value": "https://github.com/AmoxilinJN",
 			"label": "Github",
 			"order": 2
 		},
@@ -52,8 +52,8 @@
 		},
 		{
 			"id": "email",
-			"type": "email",
-			"value": "15621167967@163.com",
+			"type": "qq",
+			"value": "2987058908",
 			"label": "",
 			"order": 1
 		}
