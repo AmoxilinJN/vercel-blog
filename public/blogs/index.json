@@ -1,5 +1,19 @@
 [
   {
+    "slug": "20261104-00",
+    "title": "论文降AIGC prompt",
+    "tags": [
+      "AIGC",
+      "prompt",
+      "论文"
+    ],
+    "date": "2026-11-04T22:04",
+    "summary": "",
+    "cover": "/blogs/20261104-00/0e2f8649b94a5f1e.jpg",
+    "hidden": false,
+    "category": "杂谈"
+  },
+  {
     "slug": "20261013-00",
     "title": "AI读文献-S2GFormer",
     "tags": [
